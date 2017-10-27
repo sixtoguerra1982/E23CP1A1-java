@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title></title>
+ </head>
+ <body>
+ <input type="text" name="calculator" value="">
+ <br>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(1)">1</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(2)">2</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(3)">3</button>
+<br>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(4)">4</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(5)">5</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(6)">6</button>
+<br>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(7)">7</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(8)">8</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(9)">9</button>
+ <br>
+ 	<button class="btn" type="button" name="button" onclick="IngVal(0)">0</button>
+ 	
+ <br>
+ 	<button class="btn" type="button" name="button" onclick="IngVal('+')">+</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal('-')">-</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal('/')">/</button>
+ 	<button class="btn" type="button" name="button" onclick="IngVal('*')">*</button>
+ <br>
+ 	<button class="btn" type="button" name="button" onclick="limPiar()">AC</button>
+
+ <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+ <script type="text/javascript">
+
+ 	var result = document.getElementsByName("result")[0];
+ 	var calculator = document.getElementsByName("calculator")[0];
+ 	var calcTotal = function(){
+ 		calculator.value = eval(calculator.value);
+	 }
+
+	 var IngVal = function(x){
+		calculator.value = calculator.value + x;
+	 }
+
+	 var limPiar = function(){
+	 	calculator.value = "";
+	 }
+ </script>
+ 
+ </body>
+</html>
